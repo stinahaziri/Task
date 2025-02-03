@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="sq">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/news1Style.css">
+  
+<link rel="abortant icon" type="x-icon" href="./image/Capture1-removebg-preview (1).png" />
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 180px auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header{
+      background-color: white;
+    }
+    .container img{
+      width: 410px;
+      height: 400px;
+    }
+        .left-section {
+      width: 45%;
+    }
+
+    .left-section h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .left-section p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+        .contact-info p {
+      font-size: 16px;
+      color: #007bff;
+      margin: 5px 0;
+    }
+
+    .right-section {
+      width: 50%;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 60px;
+    }
+
+    .right-section h2 {
+      text-align: center;
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .inputGroup {
+      margin-bottom: 15px;
+    }
+    
+    .inputGroup input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      display: none;
+    }
+
+    .form-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .form-buttons button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+        .form-buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    .thank-you-message {
+      display: none;
+      text-align: center;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+  <body>
+
+
+
+
+
+  <header>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="checkInput">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <div>
+      <a href="index.html">
+        <img src="image/Capture-removebg-preview.png" alt="" />
+      </a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a  href="news1.html">News</a></li>
+      <li><a href="cmimore.html">Pricing</a></li>
+      <li><a  class="activeHeader" href="contac.html">Contact</a></li>
+      <li>
+        <a class="singUp" href="signUp.html">Sign Up Free</a>
+      </li>
+    </ul>
+
+  </header>
+    
+
+  <div class="container">
+    <div class="left-section">
+      <h2>We're on hand to help you along the way</h2>
+      <p>Product enquiries? Interested in one of our services? Reach out here and we’ll be in touch shortly.</p>
+      <div class="contact-info">
+        <p>Email: final@project.com</p>
+        <p>Phone: +44 (0)123 456 7890</p>
+       
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752299.4048114854!2d20.341640690831262!3d42.562309155566396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13537af354bf7df1%3A0xbfffeedfabc31791!2sKosovo!5e0!3m2!1sen!2s!4v1655755183193!5m2!1sen!2s"
+          width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+    </div>
+    <div class="right-section">
+      <h2>  GET IN TOUCH</h2>
+      <div class="inputGroup">
+        <input type="text" id="firstName" placeholder="First Name" maxlength="8" />
+        <div id="errorFirstName" class="error-message">Please enter a valid first name (max 8 characters).</div>
+      </div>
+      <div class="inputGroup">
+        <input type="text" id="lastName" placeholder="Last Name" maxlength="8" />
+        <div id="errorLastName" class="error-message">Please enter a valid last name (max 8 characters).</div>
+      </div>
+      <div class="form-buttons">
+        <button type="button" onclick="nextSection()">Next</button>
+      </div>
+      <div id="thankYouMessage" class="thank-you-message">Faleminderit për kontaktin tuaj!</div>
+    </div>
+  </div>
+      <script>
+    function nextSection() {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+
+      if (firstName.length > 0 && firstName.length <= 8 && lastName.length > 0 && lastName.length <= 8) {
+        document.getElementById("errorFirstName").style.display = "none";
+        document.getElementById("errorLastName").style.display = "none";
+        document.getElementById("thankYouMessage").style.display = "block";
+      } else {
+        if (firstName.length === 0 || firstName.length > 8) {
+          document.getElementById("errorFirstName").style.display = "block";
+        } else {
+          document.getElementById("errorFirstName").style.display = "none";
+        }
+        if (lastName.length === 0 || lastName.length > 8) {
+          document.getElementById("errorLastName").style.display = "block";
+        } else {
+          document.getElementById("errorLastName").style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
+

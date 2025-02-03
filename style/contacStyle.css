@@ -1,0 +1,130 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  header{
+    background-color: white;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  /* Container for the form */
+  .contact {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form section styles */
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input group styles */
+  .inputGroup {
+    margin-bottom: 15px;
+  }
+  
+  /* Input field styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Textarea specific styles */
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  /* Error message styles */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Button styles for "Back" and "Submit" buttons */
+  button[type="button"] {
+    background-color: #f44336;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e53935;
+  }
+  
+
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+
+  .secondInput {
+    display: none;
+  }
+  .contact{
+    margin-top: 200px;
+  }
+  
+  @media (max-width: 600px) {
+    .contact {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .inputGroup input,
+    .inputGroup textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    button {
+      padding: 8px 15px;
+    }
+  }
