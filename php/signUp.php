@@ -35,4 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (Exception $e) {
         die("Error: " . $e->getMessage());
     }
+} else {
+    http_response_code(405);
+    echo "Method Not Allowed";
 }
