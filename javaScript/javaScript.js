@@ -9,7 +9,7 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
   let isValid = validateForm(formData);//ktu kqyren a jon mbush format
 
   if (isValid) {//nese  te dhenat jan te vlershme
-      fetch('./php/signUp.php', {//fetch dergon te dhena ne backEnd//form.action e percaktojn actioni te formulari
+      fetch('/Task-2/php/signUp.php', {//fetch dergon te dhena ne backEnd//form.action e percaktojn actioni te formulari
           method: 'POST',//metoda qe perdoret ne kete rast esht POST
           body: formData//te dhenat te mbledhur prej formes
       })
